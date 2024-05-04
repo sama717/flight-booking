@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <link rel="stylesheet" href="bookinStyles.css"> 
+</head>
+<body>
+    <!--the header-->
+    <header>
+        <div class="logo">
+            <h1>Free</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Search</a></li>
+                <li><a href="#s">Offers</a></li>
+                <li><a href="#A">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="booking">
+        <h1>Flight Booking</h1>
+        <div id="box">
+            <form id="booking-form">
+                <div id="cities">
+                    <div class="container">
+                        <label for="from">From</label>
+                        <select id="from" name="from" required>
+                            <option value="">Departure</option>
+                            <option value="JFK">New York City (JFK)</option>
+                            <option value="LAX">Los Angeles (LAX)</option>
+                            <option value="ORD">Cairo (CAI)</option>
+                        </select>
+                    </div>
+                    <div class="container">
+                        <label for="to">To</label>
+                        <select id="to" name="to" required>
+                            <option value="">Destination</option>
+                            <option value="JFK">New York City (JFK)</option>
+                            <option value="LAX">Los Angeles (LAX)</option>
+                            <option value="ORD"> CAIRO (CAI)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="depart">
+                    <h4>Departure</h4>
+                    <div class="depart1">
+                        <label for="departure-date">Departure Date</label>
+                        <input type="date" id="departure-date" name="departure-date" required>
+                    </div>
+                    <div class="depart2">
+                        <label for="departure-time">Departure Time</label>
+                        <select id="departure-time" name="departure-time" required>
+                            <option value="14:00">2:00 PM</option>
+                            <option value="19:00">7:00 PM</option>
+                            <option value="00:00">12:00 AM</option>
+                            <option value="04:00">4:00 AM</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="return-trip">
+                    <h4>Round Trip</h4>
+                    <div class="round-trip">
+                        <label for="return-checkbox">Round Trip</label>
+                        <input type="checkbox" id="return-checkbox" name="return-checkbox">
+                    </div>
+                    <div id="return-details" style="display: none;">
+                        <label for="arrival-date">Return Date</label>
+                        <input type="date" id="arrival-date" name="arrival-date">
+                        <label for="arrival-time">Return Time</label>
+                        <select id="arrival-time" name="arrival-time">
+                            <option value="14:00">2:00 PM</option>
+                            <option value="19:00">7:00 PM</option>
+                            <option value="00:00">12:00 AM</option>
+                            <option value="04:00">4:00 AM</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="main-passenger-details">
+                    <h4>Information</h4>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" required>
+                    <br>
+                    <div class="no-passengers">
+                        <label for="passengers">Number of Passengers</label>
+                        <input class="num" type="number" id="passengers" name="passengers" min="1" max="10" value="1" required>
+                    </div>
+                </div>
+                <div class="pass">
+                <h4>Passenger Details</h4>
+                <div id="passenger-details">
+                    <!-- Passenger details will be dynamically added here -->
+                </div>
+                </div>
+                <button type="submit">BOOK NOW</button>
+            </form>
+        </div>
+    </div>
+    
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>Email: contact@gmail.com</p>
+                    <p>Phone: +1234567890</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <p><a href="#">Twitter</a></p>
+                    <p><a href="#">Facebook</a></p>
+                    <p><a href="#">Instagram</a></p>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2024 Flight Booking. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script> <!-- Include JavaScript file for interactivity -->
+</body>
+</html>

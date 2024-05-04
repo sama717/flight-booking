@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Booking</title>
+    <link rel="stylesheet" href="css/css.css">
+    <script>
+      var users = [
+       { email: "basma@gmail.com", password: "basma1234" }
+      ];
+
+
+      function validateEmail(email) {
+        var re = /\S+@\S+\.\S+/;
+        return re.test(email);
+      }
+
+
+      function login() {
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+        var validEmail = false;
+
+        users.forEach(function(user) {
+        if (user.email === email && user.password === password) {
+        validEmail = true;
+        }
+        });
+
+ 
+        if (validEmail) {
+          window.location.href = "home.html";
+         } else {
+          alert("Invalid email or password. Please try again.");
+        }
+      }
+    </script>
+</head>
+<body>
+     <div class="main">
+      <img class="img" src="images/pexels-pixabay-62623.jpg" alt="">
+      <button id="b" class="in">Login</button>
+      <a href="signup.html"> <button id="b" class="up">Sign Up</button></a>
+
+  <div class="signin">
+    <form action="#" method="post" onsubmit="event.preventDefault(); login();">
+      <div id="ee" class="form-group">
+      <label class="e">Email </label>
+      <input class="i" type="email" placeholder="Email" id="email" required>
+      </div>
+      <div id="pp" class="form-group">
+      <label class="e">Password</label>
+      <input class="i" type="password" placeholder="Password" id="password" required> 
+      </div>
+      <button type="submit" id="b" class="s">Login</button>
+    </form>
+ </div>
+ </div>
+</body>
+</html>
