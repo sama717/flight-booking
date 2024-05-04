@@ -1,3 +1,7 @@
+body{
+  margin: 0;
+}
+
 .main{
     position: relative;
 }
@@ -36,17 +40,14 @@ header {
   nav ul li a {
     color: #fff;
     text-decoration: none;
-    padding: 10px;
+    padding: 15px;
     
   }
   
   nav ul li a:hover {
     background-color: rgb(11, 11, 126);
-    border-radius: 15px;
+    border-radius: 25px;
     box-shadow: 0px 0px 50px white;
-   
-    
-
   }
   .back{
     

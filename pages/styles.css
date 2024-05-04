@@ -29,8 +29,9 @@ body {
   top: -634px;
 }
 .logo h1 {
-  margin: 0;
+  margin: 10px;
   padding-bottom: 20px;
+  text-align: center;
 }
 nav ul {
   list-style-type: none;
