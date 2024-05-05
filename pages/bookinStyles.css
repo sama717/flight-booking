@@ -25,7 +25,9 @@
 
 .logo h1 {
   margin: 0;
+  margin-top: 20px;
   padding-bottom: 20px;
+  text-align: center;
 }
 
 nav ul {
@@ -282,6 +284,7 @@ button:hover {
   width: 100%;
   /* Set width to 100% */
   margin-top: 40px;
+  width: 100;
 }
 
 #footer .footer-container {
