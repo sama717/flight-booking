@@ -13,14 +13,13 @@
 }
 
 /*Style for header*/
-.header {
+header {
   color: #fff;
   padding: 20px 0;
   text-align: center;
   font-size: large;
   font-family: sans-serif;
   position: relative;
-  top: -634px;
 }
 
 .logo h1 {
@@ -128,42 +127,51 @@ label {
   margin-bottom: 10px;
   /* Add some space below labels */
 }
-
 .depart {
   margin: 20px auto;
-  /* Set margin to auto to center horizontally */
   padding: 20px;
   background-color: var(--blue-main);
   border-color: black;
   color: var(--white);
   border-radius: 10px;
-  /* Add rounded corners */
   box-shadow: 0px 4px 8px 0px rgba(25, 55, 77, 0.5);
-  /* Add box shadow */
   width: calc(100% - 40px);
-  /* Set width to 100% of parent width minus the total horizontal padding */
   text-align: center;
   display: flex;
-  justify-content: space-between;
-  /* Space elements evenly */
-  align-items: flex-start;
-  /* Align items to the top */
+  flex-direction: column; /* Adjust to display elements in a column */
+  align-items: center; /* Center elements horizontally */
+}
+
+.depart h4 {
+  margin-top: 0; /* Remove default margin for h4 */
 }
 
 .depart1,
-.depart2 {
-  flex: 0 0 45%;
-  /* Set flex basis for equal width */
+.depart2,
+.depart3 {
+  width: 100%; /* Set width to 100% */
+  display: flex;
+  flex-direction: column; /* Adjust to display elements in a column */
+  align-items: center; /* Center elements horizontally */
+  margin-top: 10px; /* Add margin between elements */
 }
 
 .depart1 label,
-.depart2 label {
+.depart2 label,
+.depart3 label {
   display: block;
-  /* Display labels as block */
   margin-bottom: 5px;
-  /* Add some space below labels */
 }
 
+.depart1 input,
+.depart2 input,
+.depart3 input {
+  width: 50%; /* Adjust input width as needed */
+}
+
+input{
+  font-size: 15px;
+}
 button {
   background-color: var(--blue-main);
   color: var(--platinum);
@@ -177,14 +185,13 @@ button {
   margin: auto;
   /* Center the button horizontally */
   display: block;
-  font-size: 20;
+  font-size: 15px;
 }
 
 button:hover {
   background-color: var(--platinum);
   color: var(--blue-contrast);
 }
-
 #main-passenger-details {
   padding: 20px;
   background-color: var(--blue-main);
@@ -193,6 +200,21 @@ button:hover {
   border-radius: 10px;
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.5);
   align-items: center;
+  text-align: center;
+}
+
+#main-passenger-details h4 {
+  margin-top: 0;
+}
+
+#main-passenger-details label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#main-passenger-details input {
+  width: 50%;
+  margin-bottom: 10px; /* Add margin between input fields */
 }
 
 .booking {
@@ -204,77 +226,28 @@ button:hover {
   border-radius: 10px;
 }
 
-.round-trip {
-  padding: 10px;
-  background-color: var(--blue-contrast);
-  border-radius: 20px;
-  width: fit-content;
-  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.5);
-  margin-bottom: 10px;
-  /* Add margin for spacing */
-}
-
-.round-trip:hover {
-  background-color: var(--platinum);
-  color: var(--blue-contrast);
-  border-color: var(--blue-main);
-  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.5);
-}
-
-.return-trip {
-  display: block;
-  background-color: var(--blue-main);
-  padding: 20px;
-  border-radius: 10px;
+.button-container {
   display: flex;
-  /* Use flexbox */
-  justify-content: center;
-  /* Center content horizontally */
-  align-items: center;
-  /* Center content vertically */
-  flex-direction: column;
-  /* Stack items vertically */
+  justify-content: space-between;
+  margin-top: 20px; /* Add margin for spacing */
 }
 
-.no-passengers {
-  padding: 10px;
-  background-color: var(--blue-contrast);
-  border-radius: 20px;
-  width: fit-content;
-  border-color: var(--blue-main);
-  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.5);
-  margin: 20px auto 10px;
-  /* Center the container horizontally and reduce bottom margin */
-  text-align: center;
-  /* Center the text horizontally */
+.button-container button {
+  background-color: var(--blue-main);
+  color: var(--platinum);
+  border-radius: 40px;
+  width: 30%; /* Adjust button width */
+  height: 50px;
+  box-shadow: 0px 4px 8px 0px rgba(25, 55, 77, 0.5);
+  border-color: #28597B;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bolder;
+  font-size: 15px;
 }
 
-.no-passengers:hover {
+.button-container button:hover {
   background-color: var(--platinum);
   color: var(--blue-contrast);
-  border-color: var(--blue-main);
-  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.5);
-}
-
-.num {
-  margin-left: 5px;
-}
-
-#passenger-details {
-  padding-bottom: 25px;
-  margin-bottom: 15px;
-}
-
-.return-trip h4,
-#main-passenger-details h4 {
-  margin-top: 0;
-  /* Remove top margin for h4 elements */
-}
-
-.pass {
-  padding-top: 10px;
-  background-color: var(--blue-main);
-  border-radius: 10px;
 }
 
 #footer {
@@ -284,7 +257,6 @@ button:hover {
   width: 100%;
   /* Set width to 100% */
   margin-top: 40px;
-  width: 100;
 }
 
 #footer .footer-container {

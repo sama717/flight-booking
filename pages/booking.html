@@ -28,76 +28,44 @@
                 <div id="cities">
                     <div class="container">
                         <label for="from">From</label>
-                        <select id="from" name="from" required>
-                            <option value="">Departure</option>
-                            <option value="JFK">New York City (JFK)</option>
-                            <option value="LAX">Los Angeles (LAX)</option>
-                            <option value="ORD">Cairo (CAI)</option>
-                        </select>
+                        <input type="text">
                     </div>
                     <div class="container">
                         <label for="to">To</label>
-                        <select id="to" name="to" required>
-                            <option value="">Destination</option>
-                            <option value="JFK">New York City (JFK)</option>
-                            <option value="LAX">Los Angeles (LAX)</option>
-                            <option value="ORD"> CAIRO (CAI)</option>
-                        </select>
+                        <input type="text">
                     </div>
                 </div>
                 <div class="depart">
-                    <h4>Departure</h4>
+                    <h4>Flight Information</h4>
                     <div class="depart1">
                         <label for="departure-date">Departure Date</label>
-                        <input type="date" id="departure-date" name="departure-date" required>
+                        <input type="text" id="departure-date" name="departure-date" required>
                     </div>
                     <div class="depart2">
                         <label for="departure-time">Departure Time</label>
-                        <select id="departure-time" name="departure-time" required>
-                            <option value="14:00">2:00 PM</option>
-                            <option value="19:00">7:00 PM</option>
-                            <option value="00:00">12:00 AM</option>
-                            <option value="04:00">4:00 AM</option>
-                        </select>
+                        <input type="text">
                     </div>
-                </div>
-                <div class="return-trip">
-                    <h4>Round Trip</h4>
-                    <div class="round-trip">
-                        <label for="return-checkbox">Round Trip</label>
-                        <input type="checkbox" id="return-checkbox" name="return-checkbox">
-                    </div>
-                    <div id="return-details" style="display: none;">
-                        <label for="arrival-date">Return Date</label>
-                        <input type="date" id="arrival-date" name="arrival-date">
-                        <label for="arrival-time">Return Time</label>
-                        <select id="arrival-time" name="arrival-time">
-                            <option value="14:00">2:00 PM</option>
-                            <option value="19:00">7:00 PM</option>
-                            <option value="00:00">12:00 AM</option>
-                            <option value="04:00">4:00 AM</option>
-                        </select>
+                    <div class="depart3">
+                        <label for="departure-time">Arrival Time</label>
+                        <input type="text">
                     </div>
                 </div>
                 <div id="main-passenger-details">
                     <h4>Information</h4>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                    <label for="phone">Phone</label>
-                    <input type="tel" id="phone" name="phone" required>
+                    <label for="name">Name</label>
+                    <input type="text">
+                    <label for="flight-number">Flight Number</label>
+                    <input type="Text">
                     <br>
-                    <div class="no-passengers">
-                        <label for="passengers">Number of Passengers</label>
-                        <input class="num" type="number" id="passengers" name="passengers" min="1" max="10" value="1" required>
-                    </div>
+                    <label for="seat-number">Seat Number</label>
+                    <input type="Text">
+                    <label for="Price">Price</label>
+                    <input type="Text">
                 </div>
-                <div class="pass">
-                <h4>Passenger Details</h4>
-                <div id="passenger-details">
-                    <!-- Passenger details will be dynamically added here -->
-                </div>
-                </div>
-                <button type="submit">BOOK NOW</button>
+                <div class="button-container">
+                    <button type="submit">BOOK NOW</button>
+                    <button type="submit">VIEW TICKET</button>
+                </div>                
             </form>
         </div>
     </div>
