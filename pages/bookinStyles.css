@@ -171,6 +171,8 @@ label {
 
 input{
   font-size: 15px;
+  text-align: center;
+  border-radius: 20px;
 }
 button {
   background-color: var(--blue-main);

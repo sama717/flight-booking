@@ -12,11 +12,11 @@
     <header class="main-header">
         <div class="container">
             <div class="logo">
-                <h1><img src="../images/logo.png" width="100" height="auto"></h1>
+                <h1>Free</h1>
             </div>
             <nav>
                 <ul>
-                    <li><a href="../home.html">Home</a></li>
+                    <li><a href="#">Home</a></li>
                     <li><a href="#">Search</a></li>
                     <li><a href="#s">Offers</a></li>
                     <li><a href="#A">About Us</a></li>
@@ -31,124 +31,148 @@
         <!-- Flight 1 -->
         <div class="flight-box styled" id="flight1" style="background-image: url('../photos/losangeles.jpg');">
             <div class="flight-details">
-                <p><strong>From:</strong> New York</p>
-                <p><strong>Destination:</strong> Los Angeles</p>
-                <p><strong>Departure Time:</strong> 10:00 AM</p>
-                <p><strong>Price:</strong> $200</p>
+                <p><strong>From:</strong><span id="from">New York</span></p>
+                <p><strong>Destination:</strong><span id="to">Los Angeles</span></p>
+                <p><strong>Date:</strong><span id="date">24/5/2024</span></p>
+                <p><strong>Departure Time:</strong><span id="time">10:00 AM</span></p>
+                <p><strong>Arrival Time:</strong><span id="arrive-time"></span>1:00 PM</p>
+                <p><strong>Price:</strong><span id="price"></span> $200</p>
             </div>
-            <a href="booking.html" class="btn">Register</a>
+            <a href="booking.html?from=New York&to=Los Angeles&date=24/5/2024&time=10:00 AM&arrive-time=1:00 PM&price=$200" class="btn">Register</a>
         </div>
 
         <!-- Flight 2 -->
         <div class="flight-box styled" id="flight2" style="background-image: url('../photos/paris.jpg');">
             <div class="flight-details">
-                <p><strong>From:</strong> London</p>
-                <p><strong>Destination:</strong> Paris</p>
-                <p><strong>Departure Time:</strong> 2:30 PM</p>
-                <p><strong>Price:</strong> $400</p>
+                <p><strong>From:</strong><span id="from">London</span></p>
+                <p><strong>Destination:</strong><span id="to">Paris</span> </p>
+                <p><strong>Date:</strong><span id="date">30/5/2024</span></p>
+                <p><strong>Departure Time:</strong><span id="time"> 2:30 PM</span></p>
+                <p><strong>Arrival Time:</strong><span id="arrive-time"></span>5:00 PM</p>
+                <p><strong>Price:</strong><span id="price">$400</span> </p>
             </div>
-            <a href="booking.html" class="btn">Register</a>
+            <a href="booking.html?from=London&to=Paris&date=30/5/2024&time=2:30 PM&arrive-time=5:00 PM&price=$400" class="btn">Register</a>
         </div>
 
         <!-- Flight 3 -->
         <div class="flight-box styled" id="flight3" style="background-image: url('../photos/Amsterdam2.jpg');">
             <div class="flight-details">
-                <p><strong>From:</strong> Cairo</p>
-                <p><strong>Destination:</strong> Amsterdam</p>
-                <p><strong>Departure Time:</strong> 5:30 PM</p>
-                <p><strong>Price:</strong> $600</p>
+                <p><strong>From:</strong><span id="from">Cairo</span> </p>
+                <p><strong>Destination:</strong><span id="to">Amsterdam</span> </p>
+                <p><strong>Date:</strong><span id="date">5/6/2024</span></p>
+                <p><strong>Departure Time:</strong><span id="time">5:30 PM</span> </p>
+                <p><strong>Arrival Time:</strong><span id="arrive-time"></span>10:00 PM</p>
+                <p><strong>Price:</strong><span id="price"> $600</span></p>
             </div>
-            <a href="booking.html" class="btn">Register</a>
+            <a href="booking.html?from=Cairo&to=Amsterdam&date=5/6/2024&time=5:30 PM&arrive-time=10:00 PM&price=$600" class="btn">Register</a>
         </div>
         <!-- Flight 4 -->
         <div class="flight-box styled" id="flight4" style="background-image: url('../photos/barcelona.jpg');">
             <div class="flight-details">
-                <p><strong>From:</strong> Madrid</p>
-                <p><strong>Destination:</strong> Barcelona</p>
-                <p><strong>Departure Time:</strong> 1:30 AM</p>
-                <p><strong>Price:</strong> $100</p>
+                <p><strong>From:</strong><span id="from">Madrid</span> </p>
+                <p><strong>Destination:</strong><span id="to">Barcelona</span> </p>
+                <p><strong>Date:</strong><span id="date">2/6/2024</span> </p>
+                <p><strong>Departure Time:</strong><span id="time">1:30 AM</span> </p>
+                <p><strong>Arrival Time:</strong><span id="arrive-time">3:00 AM</span> </p>
+                <p><strong>Price:</strong><span id="price"> $100</span></p>
             </div>
-            <a href="booking.html" class="btn">Register</a>
+            <a href="booking.html?from=Madrid&to=Barcelona&date=2/6/2024&time=1:30 AM&arrive-time=3:00 AM&price=$100" class="btn">Register</a>
         </div>
         <!-- Flight 5 -->
         <div class="flight-box styled" id="flight5" style="background-image: url('../photos/madrid.jpg');">
             <div class="flight-details">
-                <p><strong>From:</strong> San Francisco</p>
-                <p><strong>Destination:</strong> Madrid</p>
-                <p><strong>Departure Time:</strong> 2:30 AM</p>
-                <p><strong>Price:</strong> $400</p>
+                <p><strong>From:</strong><span id="from">San Francisco</span></p>
+                <p><strong>Destination:</strong><span id="to">Madrid</span></p>
+                <p><strong>Date:</strong><span id="date">20/7/2024</span></p>
+                <p><strong>Departure Time:</strong><span id="time">2:30 AM</span></p>
+                <p><strong>Arrival Time:</strong><span id="arrive-time">9:30 AM</span></p>
+                <p><strong>Price:</strong><span id="price">$400</span></p>
             </div>
-            <a href="booking.html" class="btn">Register</a>
+            <a href="booking.html?from=San Francisco&to=Madrid&date=20/7/2024&time=2:30 AM&arrive-time=9:30 AM&price=$400" class="btn">Register</a>
         </div>
         <!-- Flight 6 -->
         <div class="flight-box styled" id="flight6" style="background-image: url('../photos/tokoyo.jpg');">
             <div class="flight-details">
-                <p><strong>From:</strong> Roma</p>
-                <p><strong>Destination:</strong> Tokyo</p>
-                <p><strong>Departure Time:</strong> 3:30 PM</p>
-                <p><strong>Price:</strong> $600</p>
+                <p><strong>From:</strong><span id="from">Roma</span></p>
+                <p><strong>Destination:</strong><span id="to">Tokyo</span></p>
+                <p><strong>Date:</strong><span id="date">15/7/2024</span></p>
+                <p><strong>Departure Time:</strong><span id="time">3:30 PM</span></p>
+                <p><strong>Arrival Time:</strong><span id="arrive-time">10:00 PM</span></p>
+                <p><strong>Price:</strong><span id="price">$600</span></p>
             </div>
-            <a href="booking.html" class="btn">Register</a>
+            <a href="booking.html?from=Roma&to=Tokyo&date=15/6/2024&time=3:30 PM&arrive-time=10:00 PM&price=$600" class="btn">Register</a>
         </div>
         <!-- Flight 7 -->
         <div class="flight-box styled" id="flight7" style="background-image: url('../photos/Hawaii.jpg');">
             <div class="flight-details">
-                <p><strong>From:</strong> Cairo</p>
-                <p><strong>Destination:</strong> Hawaii</p>
-                <p><strong>Departure Time:</strong> 6:00 AM</p>
-                <p><strong>Price:</strong> $3000</p>
+                <p><strong>From:</strong><span id="from">Cairo</span> </p>
+                <p><strong>Destination:</strong><span id="to">Hawaii</span> </p>
+                <p><strong>Date:</strong><span id="date">30/7/2024</span> </p>
+                <p><strong>Departure Time:</strong><span id="time">6:00 AM</span></p>
+                <p><strong>Arrival Time:</strong><span id="arrive-time">2:45 PM</span></p>
+                <p><strong>Price:</strong><span id="price">$3000</span></p>
             </div>
-            <a href="booking.html" class="btn">Register</a>
+            <a href="booking.html?from=Cairo&to=Hawaii&date=30/7/2024&time=6:00 AM&arrive-time=2:45 PM&price=$3000" class="btn">Register</a>
         </div>
         <!-- Flight 8 -->
         <div class="flight-box styled" id="flight8" style="background-image: url('../photos/istanbul.jpg');">
             <div class="flight-details">
-                <p><strong>From:</strong> Jeddah</p>
-                <p><strong>Destination:</strong> İstanbul</p>
-                <p><strong>Departure Time:</strong> 9:00 PM</p>
+                <p><strong>From:</strong><span id="from">Jeddah</span> </p>
+                <p><strong>Destination:</strong><span id="to">İstanbul</span> </p>
+                <p><strong>Date:</strong><span id="date">4/8/2024</span> </p>
+                <p><strong>Departure Time:</strong><span id="time"> 9:00 PM</span></p>
+                <p><strong>Arrival Time:</strong><span id="arrive-time"> 1:00 AM</span></p>
                 <p><strong>Price:</strong> $800</p>
             </div>
-            <a href="booking.html" class="btn">Register</a>
+            <a href="booking.html?from=Jeddah&to=İstanbul&date=4/8/2024&time=9:00 PM&arrive-time=1:00 AM&price=$800" class="btn">Register</a>
         </div>
         <!-- Flight 9 -->
         <div class="flight-box styled" id="flight9" style="background-image: url('../photos/Cape\ Town.jpg');">
             <div class="flight-details">
-                <p><strong>From:</strong> Berlin</p>
-                <p><strong>Destination:</strong> Cape Town</p>
-                <p><strong>Departure Time:</strong> 3:00 PM</p>
-                <p><strong>Price:</strong> $750</p>
+                <p><strong>From:</strong><span id="from">Berlin</span> </p>
+                <p><strong>Destination:</strong><span id="to">Cape Town</span></p>
+                <p><strong>Destination:</strong><span id="date">25/8/2024</span></p>
+                <p><strong>Departure Time:</strong><span id="time">3:00 PM</span></p>
+                <p><strong>Arrival Time:</strong><span id="time">10:00 PM</span></p>
+                <p><strong>Price:</strong><span id="price">$750</span> </p>
             </div>
-            <a href="booking.html" class="btn">Register</a>
+            <a href="booking.html?from=Berlin&to=Cape Town&date=25/8/2024&time=3:00 PM&arrive-time=10:00 PM&price=$750" class="btn">Register</a>
         </div>
         <!-- Flight 10 -->
         <div class="flight-box styled" id="flight10" style="background-image: url('../photos/Cairo.jpg');">
             <div class="flight-details">
-                <p><strong>From:</strong> Jeddah</p>
-                <p><strong>Destination:</strong> Cairo</p>
-                <p><strong>Departure Time:</strong> 3:00 PM</p>
-                <p><strong>Price:</strong> $100</p>
+                <p><strong>From:</strong><span id="from">Jeddah</span> </p>
+                <p><strong>Destination:</strong><span id="to">Cairo</span> </p>
+                <p><strong>Destination:</strong><span id="date">29/9/2024</span> </p>
+                <p><strong>Departure Time:</strong><span id="time">3:00 PM</span></p>
+                <p><strong>Arrival Time:</strong><span id="arrive-time">5:30 PM</span></p>
+                <p><strong>Price:</strong><span id="price">$100</span> </p>
             </div>
-            <a href="booking.html" class="btn">Register</a>
+            <a href="booking.html?from=Jeddah&to=Cairo&date=29/9/2024&time=3:00 PM&arrive-time=5:30 PM&price=$100" class="btn">Register</a>
         </div>
         <!-- Flight 11 -->
         <div class="flight-box styled" id="flight11" style="background-image: url('../photos/Rome.jpg');">
             <div class="flight-details">
-                <p><strong>From:</strong> Berlin</p>
-                <p><strong>Destination:</strong> Roma</p>
-                <p><strong>Departure Time:</strong> 9:00 AM</p>
-                <p><strong>Price:</strong> $750</p>
+                <p><strong>From:</strong><span id="from">Berlin</span> </p>
+                <p><strong>Destination:</strong><span id="to"></span> Roma</p>
+                <p><strong>Destination:</strong><span id="date"></span>10/8/2024</p>
+                <p><strong>Departure Time:</strong><span id="time">9:00 AM</span></p>
+                <p><strong>Arrival Time:</strong><span id="arrive-time">12:00 PM</span></p>
+                <p><strong>Price:</strong><span id="price"> $750</span></p>
             </div>
-            <a href="booking.html" class="btn">Register</a>
+            <a href="booking.html?from=Berlin&to=Roma&date=10/8/2024&time=9:00 AM&arrive-time=12:00 PM&price=$750" class="btn">Register</a>
         </div>
-         <!-- Flight 11 -->
+         <!-- Flight 12 -->
          <div class="flight-box styled" id="fligh12" style="background-image: url('../photos/Al-quds.jpg');">
             <div class="flight-details">
-                <p><strong>From:</strong> Cairo</p>
-                <p><strong>Destination:</strong> Al-Quds</p>
-                <p><strong>Departure Time:</strong> 9:00 AM</p>
-                <p><strong>Price:</strong> $50</p>
+                <p><strong>From:</strong><span id="from">Cairo</span></p>
+                <p><strong>Destination:</strong><span id="to">Al-Quds</span></p>
+                <p><strong>Date:</strong><span id="date">20/8/2024</span></p>
+                <p><strong>Departure Time:</strong><span id="time">9:00 AM</span></p>
+                <p><strong>Arrival Time:</strong><span id="arrive-time">11:00 AM</span></p>
+                <p><strong>Price:</strong><span id="price">$50</span></p>
             </div>
-            <a href="booking.html" class="btn">Register</a>
+            <a href="booking.html?from=Cairo&to=Al-Quds&date=20/8/2024&time=9:00 AM&arrive-time=11:00 AM&price=$50" class="btn">Register</a>
         </div>
     </div>
     <!--the footer-->
@@ -170,6 +194,5 @@
             <p class="copyright">&copy; 2024 Flight Booking. All rights reserved.</p>
         </div>
     </footer>
-    <script src="script2.js"></script>
 </body>
 </html>

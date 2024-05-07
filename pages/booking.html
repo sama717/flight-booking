@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booking</title>
     <link rel="stylesheet" href="bookinStyles.css"> 
+    
 </head>
 <body>
-    <!--the header-->
     <header>
         <div class="logo">
             <h1><img src="../images/logo2.png" width="100" height="auto"></h1>
@@ -28,39 +28,40 @@
                 <div id="cities">
                     <div class="container">
                         <label for="from">From</label>
-                        <input type="text">
+                        <input type="text" id="from" name="from" readonly>
                     </div>
                     <div class="container">
                         <label for="to">To</label>
-                        <input type="text">
+                        <input type="text" id="to" name="to" readonly>
                     </div>
                 </div>
                 <div class="depart">
                     <h4>Flight Information</h4>
                     <div class="depart1">
                         <label for="departure-date">Departure Date</label>
-                        <input type="text" id="departure-date" name="departure-date" required>
+                        <input type="text" id="date" name="departure-date" required readonly>
                     </div>
                     <div class="depart2">
                         <label for="departure-time">Departure Time</label>
-                        <input type="text">
+                        <input type="text" id="time" name="time" readonly>
                     </div>
                     <div class="depart3">
                         <label for="departure-time">Arrival Time</label>
-                        <input type="text">
+                        <input type="text" id="arrive-time" name="arrival-time" readonly>
                     </div>
                 </div>
                 <div id="main-passenger-details">
                     <h4>Information</h4>
+                    <h5>INSERT NAME</h5>
                     <label for="name">Name</label>
-                    <input type="text">
+                    <input type="text" id="name" name="name" required>
                     <label for="flight-number">Flight Number</label>
-                    <input type="Text">
+                    <input type="Text" id="flight-number" name="flight-number" readonly>
                     <br>
                     <label for="seat-number">Seat Number</label>
-                    <input type="Text">
-                    <label for="Price">Price</label>
-                    <input type="Text">
+                    <input type="Text" id="seat-number" name="seat-number" readonly>
+                    <label for="price">Price</label>
+                        <input type="text" id="price" name="price" readonly>
                 </div>
                 <div class="button-container">
                     <button type="submit">BOOK NOW</button>
@@ -88,7 +89,82 @@
             <p class="copyright">&copy; 2024 Flight Booking. All rights reserved.</p>
         </div>
     </footer>
-    
-    <script src="script.js"></script> <!-- Include JavaScript file for interactivity -->
+    <script>
+        window.onload = function() {
+            // Function to extract URL parameter value by name
+            function getParameterByName(name, url) {
+                if (!url) url = window.location.href;
+                name = name.replace(/[\[\]]/g, "\\$&");
+                var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                    results = regex.exec(url);
+                if (!results) return null;
+                if (!results[2]) return '';
+                return decodeURIComponent(results[2].replace(/\+/g, " "));
+            }
+            
+            // Get the values from URL parameters
+            var from = getParameterByName('from');
+            var to = getParameterByName('to');
+            var date = getParameterByName('date');
+            var time = getParameterByName('time');
+            var arriveTime = getParameterByName('arrive-time');
+            var price = getParameterByName('price');
+
+            // Populate input fields with the retrieved values
+            document.getElementById('from').value = from;
+            document.getElementById('to').value = to;
+            document.getElementById('date').value = date;
+            document.getElementById('time').value = time;
+            document.getElementById('arrive-time').value = arriveTime;
+            document.getElementById('price').value = price;
+
+            // Generate and set flight number
+            generateAndSetFlightNumber();
+            // Generate and set seat number
+            generateAndSetSeatNumber();
+        };
+
+        function generateRandomFlightNumber() {
+            var letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            var numbers = '0123456789';
+            var result = '';
+            for (var i = 0; i < 2; i++) {
+                result += letters.charAt(Math.floor(Math.random() * letters.length));
+            }
+            for (var j = 0; j < 4; j++) {
+                result += numbers.charAt(Math.floor(Math.random() * numbers.length));
+            }
+            return result;
+        }
+
+        function generateAndSetFlightNumber() {
+            // Generate a random flight number
+            var randomFlightNumber = generateRandomFlightNumber();
+
+            // Set the generated flight number as the value of the input field
+            document.getElementById('flight-number').value = randomFlightNumber;
+        }
+
+        function generateRandomSeat() {
+            // Generate a random uppercase letter (A-Z)
+            var letter = String.fromCharCode(65 + Math.floor(Math.random() * 26));
+            
+            // Generate a random number (0-9)
+            var number = Math.floor(Math.random() * 10);
+            
+            // Concatenate the letter and number to form the seat string
+            var seat = letter + number;
+            
+            return seat;
+        }
+
+        function generateAndSetSeatNumber() {
+            // Generate a random seat number
+            var randomSeat = generateRandomSeat();
+
+            // Set the generated seat number as the value of the input field
+            document.getElementById('seat-number').value = randomSeat;
+        }
+    </script>
 </body>
 </html>
